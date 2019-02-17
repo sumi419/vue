@@ -2,7 +2,8 @@
   <div id="app">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- passing in a message prop to HelloWorld component -->
-    {{msg}}
+    <!-- {{msg}} -->
+    <Header/>
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
@@ -10,11 +11,13 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
 export default {
   name: "app",
   components: {
     // HelloWorld
+    Header,
     Todos
   },
   data() {
