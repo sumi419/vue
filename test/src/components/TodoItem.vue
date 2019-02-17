@@ -5,6 +5,8 @@
       <!-- add event like onChange -->
       <input type="checkbox" v-on:change="markComplete">
       {{todo.title}}
+      <!-- emits an event on click or v-on -->
+      <button @click="$emit('del-todo', todo.id)" class="del">x</button>
     </p>
   </div>
 </template>

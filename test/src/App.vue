@@ -3,7 +3,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- passing in a message prop to HelloWorld component -->
     {{msg}}
-    <Todos v-bind:todos="todos"/>
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
 <!-- html -->
@@ -37,6 +37,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    }
   }
 };
 </script>
