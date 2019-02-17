@@ -46,6 +46,15 @@ export default {
           completed
         })
         .then(res => (this.todos = [...this.todos, res.data]))
+        // .then(res => {
+        //   if (newTodo !== "") {
+        //     this.todos = [...this.todos, res.data];
+        //   } else if (res.data === "") {
+        //     alert("please enter in a todo");
+        //   } else {
+        //     alert("Not Long Enough!");
+        //   }
+        // })
         .catch(err => console.log(err));
     }
   },
