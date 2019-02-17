@@ -3,17 +3,19 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- passing in a message prop to HelloWorld component -->
     {{msg}}
+    <Todos v-bind:todos="todos"/>
   </div>
 </template>
 <!-- html -->
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-
+import Todos from "./components/Todos";
 export default {
   name: "app",
   components: {
     // HelloWorld
+    Todos
   },
   data() {
     return {
