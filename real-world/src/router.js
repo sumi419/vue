@@ -8,8 +8,8 @@ import EventShow from "./views/EventShow.vue";
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
+  mode: "history", // gets rid of # in routes
+  // base: process.env.BASE_URL,
   routes: [{
       path: "/",
       name: "event-list",
@@ -18,7 +18,8 @@ export default new Router({
     {
       path: "/event",
       name: "event-show",
-      component: EventShow
+      component: EventShow,
+      props: true // to pass down params
     },
     {
       path: "/event/create",
